@@ -6,7 +6,7 @@ memo_type = gets.to_i # ユーザーの入力値を取得し、数字へ変換�
 
 if memo_type == 1
   puts "拡張子を除いたファイル名を入力して下さい"
-  file_name = gets
+  file_name = gets.chomp
   puts "メモしたい内容を記入して下さい"
   puts "完了したらCtrl + D を押します"
   memo = STDIN.read
@@ -15,7 +15,7 @@ if memo_type == 1
   end
 elsif memo_type == 2
   puts "編集するファイル名を拡張子を除いて入力して下さい"
-  file_name = gets
+  file_name = gets.chomp
   puts "追記する内容を記入して下さい"
   puts "完了したらCtrl + D を押します"
   memo = STDIN.read
